@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #4facfe, #00c6ff);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  border-radius: 28px;
+  padding: 28px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.alert {
+  background: rgba(255, 193, 7, 0.2);
+  border: 1px solid rgba(255, 193, 7, 0.5);
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+}
+
+.search button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  color: #1e3c72;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search button:hover {
+  transform: scale(1.05);
+}
+
+.emoji {
+  font-size: 54px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 64px;
+  margin: 8px 0;
+}
+
+.condition {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.detail-box {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 12px;
+  text-align: center;
+}
+
+.detail-box span {
+  font-size: 24px;
+}
+
+.detail-box p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.detail-box strong {
+  font-size: 15px;
+}
+
+.section {
+  margin-top: 28px;
+  text-align: left;
+}
+
+.section h3 {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.hourly-container,
+.weekly-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  scrollbar-width: none;
+}
+
+.hourly-container::-webkit-scrollbar,
+.weekly-container::-webkit-scrollbar {
+  display: none;
+}
+
+.hourly-card,
+.weekly-card {
+  min-width: 90px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 12px;
+  text-align: center;
+}
+
+.hourly-card img,
+.weekly-card img {
+  width: 52px;
+  height: 52px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 54px;
+  }
+}
